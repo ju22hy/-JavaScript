@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <ul class="header-lists"></ul>
+      </header>
+      <div class="tabs">
+        <div class="buttons">
+          <button class="active">Tab1</button>
+          <button>Tab2</button>
+          <button>Tab3</button>
+        </div>
+        <div class="panels">
+          <div class="panel-1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </div>
+          <div class="panel-2">
+            Pariatur exercitationem, nam doloribus in harum esse odit quasi
+            magnam earum voluptate beatae voluptatum sunt repudiandae
+            consequatur.
+          </div>
+          <div class="panel-3">
+            Magnam earum voluptate beatae voluptatum sunt repudiandae
+            consequatur sit doloremque dicta accusamus aliquid.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: #fff;
+      }
+
+      ol,
+      ul {
+        list-style: none;
+      }
+
+      .wrapper {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #212121;
+        flex-direction: column;
+      }
+
+      header {
+        width: 100%;
+        padding: 1.25rem 5%;
+      }
+
+      header ul {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .tabs {
+        width: 80%;
+        height: auto;
+        border: 1px solid #fff;
+        padding: 0.5rem;
+      }
+
+      .tabs > div {
+        width: 100%;
+      }
+
+      .tabs .buttons {
+        display: flex;
+      }
+
+      .tabs button {
+        width: 33.33%;
+        color: #212121;
+        background: #fff;
+        border: 0;
+        outline: 0;
+        padding: 1rem 0;
+      }
+
+      .tabs button:not(:nth-child(3)) {
+        border-right: 1px solid #212121;
+      } /* tabs의 오른쪽에 검은선을 만드는데 3번째만 안 준 거 */
+
+      .tabs button.active {
+        background: #dddddd43;
+        color: #fff;
+      }
+
+      .panels > div {
+        padding: 0.5rem;
+        background: #dddddd43;
+        display: none;
+      }
+
+      .panels > div.panel-1 {
+        display: block;
+      }
+    </style>
+
+    <script src="arrMethod.js"></script>
+  </body>
+</html>
